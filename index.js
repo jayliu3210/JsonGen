@@ -88,4 +88,4 @@ class JsonGen{
 }
 
 
-export default new JsonGen()
+export default JsonGen
