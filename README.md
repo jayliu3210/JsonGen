@@ -28,10 +28,10 @@ const update = {
   incfield1:':v.field1 ? 1 : undefined',
  },
  $push:{
-  _if:':v.allowPush'
+  _if:':v.allowPush',
   items:{
     field1:'value1',
-    field2:':v:pushValu2'
+    field2:':v.pushValue2'
   }
  }
 }
