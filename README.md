@@ -1,0 +1,2 @@
+# JsonGen
+Json生成器，与mongodb或Elasticsearch打交道时， 可以基于json模板和当前参数合并生成新json用于查询或插值
