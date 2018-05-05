@@ -7,7 +7,7 @@ Json生成器，与mongodb或Elasticsearch打交道时， 可以基于json模板
 如果对象和数组内没有值了， 则全移除
 
 ##使用示例
-const JsonGen = require('jsonGen')();
+const JsonGen = new require('jsonGen')();
 const orginalJsonTemplate = {
     index:'user',
     type:'doc',
