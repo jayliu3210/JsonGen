@@ -6,6 +6,7 @@ class JsonGen{
         opt.protocol = opt.protocol || ':';
         opt.exclusion = opt.exclusion || '_if';
         opt.simplify = opt.simplify || this.simplify;
+        opt.allowEmptyString = opt.allowEmptyString || 'true';
         this.opt = opt;
     }
     /**
@@ -80,7 +81,7 @@ class JsonGen{
     simplify(value){
         if (value===null || value===undefined) return undefined;
         if ((value instanceof Array) && value.length==0) return undefined;
-        if (typeof value=='string' && value.trim().length==0) return undefined;
+        if (typeof value=='string' && value.trim().length==0 && !opt.allowEmptyString) return undefined;
         if (typeof value=='number' && isNaN(value)) return undefined;
         return value;
     }
