@@ -2,11 +2,13 @@
 Json生成器，与mongodb或Elasticsearch打交道时， 可以基于json模板和当前参数合并生成新json用于查询或插值
 
 ## 说明
+```
 自动基于json模板生成有效的查询json
 如果指定的参数不存在， 则移除该属性
 如果对象和数组内没有值了， 则全移除
-
+```
 ##使用示例
+```
 const JsonGen = new require('jsonGen')();
 const orginalJsonTemplate = {
     index:'user',
@@ -23,7 +25,10 @@ const orginalJsonTemplate = {
         }
     }
 };
-
+jsonGen.process(orginalJsonTemplate, {p:1});
+```
+##结果说明
+```
 jsonGen.process(orginalJsonTemplate, {p:1});
 将生成
 {
@@ -50,3 +55,4 @@ jsonGen.process(orginalJsonTemplate, {q:'查询参数', p:1});
         }
     }
 };
+```
