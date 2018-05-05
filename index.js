@@ -1,7 +1,7 @@
 'use strict';
 
 class JsonGen{
-	constructor(opt){
+    constructor(opt){
         opt = Object.assign({}, opt);
         opt.protocol = opt.protocol || ':';
         opt.exclusion = opt.exclusion || '_if';
@@ -13,7 +13,7 @@ class JsonGen{
      * @param {*} original  原始json
      * @param {*} v 参数
      */
-    process(original, v){
+    build(original, v){
         return this.object(original, v);
     }
     /**
