@@ -36,11 +36,11 @@ const update = {
  }
 }
 如果
-jsonGen.process(update, {});
+jsonGen.build(update, {});
 结果为
 undefined
 
-jsonGen.process(update, {value1:22});
+jsonGen.build(update, {value1:22});
 结果为
 {
  $set:{
@@ -48,7 +48,7 @@ jsonGen.process(update, {value1:22});
  }
 }
 
-jsonGen.process(update, {value1:22,value2:'22'});
+jsonGen.build(update, {value1:22,value2:'22'});
 结果为
 {
  $set:{
@@ -57,7 +57,7 @@ jsonGen.process(update, {value1:22,value2:'22'});
  }
 }
 
-jsonGen.process(update, {value1:22,field1:'value'});
+jsonGen.build(update, {value1:22,field1:'value'});
 结果为
 {
  $set:{
@@ -68,7 +68,7 @@ jsonGen.process(update, {value1:22,field1:'value'});
  }
 }
 
-jsonGen.process(update, {value1:true,allowPush:'true'});
+jsonGen.build(update, {value1:true,allowPush:'true'});
 结果为
 {
  $set:{
